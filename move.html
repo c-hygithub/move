@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>move.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<style type="text/css">
+#divId {
+	position: absolute;
+	/* top:300px;
+left:200px; */
+
+}
+</style>
+</head>
+
+<body onload="run()">
+
+	<div id="divId" style=" left: 300px;">
+		<img alt="我的世界" src="5.jpg"  width="300px"  height="350px"/>
+	</div>
+</body>
+<script type="text/javascript">
+	function run() {
+		//获取div
+		 document.getElementById("divId").style.top=Math.random()*300+"px";
+		 document.getElementById("divId").style.left = Math.random() * 500
+				+ "px"; 
+		window.setTimeout("run()", 2000); 
+	
+	}
+</script>
+</html>
